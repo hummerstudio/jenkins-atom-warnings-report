@@ -1,0 +1,11 @@
+{
+  "name": "Compiler warnings",
+  "summary": "读编译器和 linter 的输出，按严重级别统计并发布。",
+  "author": "hummerstudio",
+  "license": "MIT",
+  "tags": [
+    "official-port",
+    "warnings-ng"
+  ],
+  "homepage": "https://github.com/hummerstudio/jenkins-atom-warnings-report"
+}

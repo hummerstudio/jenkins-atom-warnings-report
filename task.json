@@ -1,0 +1,69 @@
+{
+  "atomCode": "warnings-report",
+  "name": "Compiler warnings",
+  "version": "1.0.0",
+  "description": "读编译器和 linter 的输出，按严重级别统计并发布。",
+  "execution": {
+    "packagePath": "warnings-report.jar",
+    "language": "java",
+    "target": "$atom_java_path -cp warnings-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+  },
+  "input": {
+    "pattern": {
+      "label": "日志文件（glob，逗号分隔）",
+      "type": "vuex-input",
+      "default": "**/build.log, **/*.log, **/warnings*.txt"
+    },
+    "label": {
+      "label": "报告名称",
+      "type": "vuex-input",
+      "default": "Warnings"
+    },
+    "outputDir": {
+      "label": "HTML 输出目录",
+      "type": "vuex-input",
+      "default": "out/warnings"
+    },
+    "maxErrors": {
+      "label": "允许的 error 数",
+      "type": "vuex-input-number",
+      "default": "0"
+    },
+    "maxWarnings": {
+      "label": "允许的 warning 数（-1 = 不检查）",
+      "type": "vuex-input-number",
+      "default": "-1"
+    }
+  },
+  "output": {
+    "total": {
+      "type": "string",
+      "description": "总数"
+    },
+    "errors": {
+      "type": "string",
+      "description": "error 数"
+    },
+    "warnings": {
+      "type": "string",
+      "description": "warning 数"
+    },
+    "linesScanned": {
+      "type": "string",
+      "description": "扫描行数"
+    },
+    "report": {
+      "type": "report",
+      "description": "构建页内嵌报告"
+    }
+  },
+  "x-jenkins": {
+    "protocol": "jenkins-1",
+    "requires": {
+      "runner": ">=0.4.0"
+    },
+    "context": [
+      "log"
+    ]
+  }
+}
