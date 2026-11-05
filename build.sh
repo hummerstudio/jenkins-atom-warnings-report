@@ -35,9 +35,9 @@ mkdir -p "$classes/META-INF/services"
 cp src/main/resources/META-INF/services/* "$classes/META-INF/services/"
 ( cd "$sdk" && "$JAR" xf "$SDK_JAR" && rm -rf META-INF/MANIFEST.MF META-INF/services )
 
-rm -rf dist/warnings-report
-mkdir -p dist/warnings-report
-"$JAR" --create --file dist/warnings-report/warnings-report.jar -C "$classes" . -C "$sdk" .
-cp task.json dist/warnings-report/
-[ -f meta.json ] && cp meta.json dist/warnings-report/
-echo "built dist/warnings-report: $(ls dist/warnings-report | tr '\n' ' ')"
+rm -rf dist/warnings
+mkdir -p dist/warnings
+"$JAR" --create --file dist/warnings/warnings.jar -C "$classes" . -C "$sdk" .
+cp task.json dist/warnings/
+[ -f meta.json ] && cp meta.json dist/warnings/
+echo "built dist/warnings: $(ls dist/warnings | tr '\n' ' ')"

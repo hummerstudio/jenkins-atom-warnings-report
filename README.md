@@ -1,4 +1,4 @@
-# jenkins-atom-warnings-report
+# jenkins-atom-warnings
 
 Compiler warnings — port of **warnings-ng** (18,389) as an atom.
 

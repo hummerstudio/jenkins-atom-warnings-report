@@ -1,12 +1,12 @@
 {
-  "atomCode": "warnings-report",
+  "atomCode": "warnings",
   "name": "Compiler warnings",
   "version": "1.0.0",
   "description": "读编译器和 linter 的输出，按严重级别统计并发布。",
   "execution": {
-    "packagePath": "warnings-report.jar",
+    "packagePath": "warnings.jar",
     "language": "java",
-    "target": "$atom_java_path -cp warnings-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+    "target": "$atom_java_path -cp warnings.jar com.jenkinschina.atom.sdk.AtomRunner"
   },
   "input": {
     "pattern": {
