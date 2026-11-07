@@ -7,6 +7,5 @@ Compiler warnings — port of **warnings-ng** (18,389) as an atom.
 ## Build and smoke test
 
 ```bash
-./build.sh
-./tools/smoke.sh
+mvn verify    # packages dist/warnings/ and runs src/test/java/atom/WarningsReportIT.java
 ```
