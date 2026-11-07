@@ -37,4 +37,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: warnings-atom
-          path: atom/dist/warnings/
+          path: atom/target/dist/warnings/
